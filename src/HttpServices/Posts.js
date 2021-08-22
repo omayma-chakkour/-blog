@@ -1,0 +1,12 @@
+import http from "./HttpRequests";
+const baseUrl = "http://127.0.0.1:8000";
+
+//getting all posts
+export const GetAllPosts = () => http.get(`${baseUrl}/posts`);
+
+//getting post data by id
+export const GetPostDetailsById = ({ id }) =>
+  http.get(`${baseUrl}/posts/${id}`);
+
+//Deleting post data by id
+export const DeletePostById = ({ id }) => http.delete(`${baseUrl}/posts/${id}`);
