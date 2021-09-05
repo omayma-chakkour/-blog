@@ -9,7 +9,6 @@ import {
   IconButton,
   List,
   ListItem,
-  ListItemIcon,
   ListItemSecondaryAction,
   ListItemText,
   Typography,
@@ -50,7 +49,7 @@ export default function SinglePostDetails(props) {
 
   useEffect(() => {
     GetPostDetailsById({ id })
-      .then(({ data }) => {
+      .then(({ data: { data } }) => {
         setData(data);
         console.log("data", data);
       })
@@ -60,6 +59,7 @@ export default function SinglePostDetails(props) {
           props.history.push("/posts");
         }
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const DialogContent = () => (

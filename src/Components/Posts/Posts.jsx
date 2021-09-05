@@ -8,7 +8,10 @@ export default function Posts() {
 
   const GetAllPostsByREquest = () =>
     GetAllPosts()
-      .then(({ data }) => setPostData(data))
+      .then(({ data: { data } }) => {
+        console.log("data", data);
+        setPostData(data);
+      })
       .catch((e) => console.log("error", e.message));
 
   useEffect(() => {

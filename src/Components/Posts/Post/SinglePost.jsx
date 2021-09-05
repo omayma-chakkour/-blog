@@ -16,7 +16,7 @@ export default function SinglePost({ item }) {
           />
         </Box>
         <CardContent>
-          <Link to={`/posts/${item.id}`} className={classes.Link}>
+          <Link to={`/posts/${item._id}`} className={classes.Link}>
             <Typography variant='body1' component='h6' color='textPrimary'>
               {item.title}
             </Typography>
