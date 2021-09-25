@@ -11,7 +11,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "joi": "^17.4.2",
-    "mongoose": "^6.0.1",
-    "nodemon": "^2.0.12"
+    "mongoose": "^6.0.7",
+    "nodemon": "^2.0.12",
+    "ansi-regex": ">=5.0.1"
   }
 }
