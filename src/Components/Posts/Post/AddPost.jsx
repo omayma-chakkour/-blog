@@ -1,10 +1,33 @@
 import React, { useState } from "react";
 import { Box, Button, Container, Grid, Typography } from "@material-ui/core";
 import joi from "joi-browser";
+import { createMuiTheme , Paper} from "@material-ui/core";
 import FileBase64 from "react-file-base64";
 import { TextInputField } from "../../Common/FormComponents";
 import { AddPosts } from "../../../HttpServices/Posts";
 import { toast } from "react-toastify";
+import { green, purple } from "@material-ui/core/colors";
+// import IconButton from 'material-ui/IconButton'; 
+// import ActionHome from 'material-ui/svg-icons/action/home';
+
+import Image from '../../../images/logo192.png'
+
+const styles = {
+  paperContainer : {
+    backgroudImage: `url(${Image})`
+  }
+};
+
+
+const theme = createMuiTheme ({
+  palette: {
+    primary: purple,
+    secondary: green,
+  },
+  status: {
+    danger: 'orange',
+  },
+});
 
 export default function AddPost(props) {
   const [formValidationError, setFormValidationError] = useState("");
@@ -77,7 +100,7 @@ export default function AddPost(props) {
   };
 
   return (
-    <Container maxWidth='md' component={Box} mt={4}>
+    <Container maxWidth='md' component={Box} mt={4} style={styles.paperContainer}>
       <Grid
         container
         direction='row'
@@ -86,7 +109,7 @@ export default function AddPost(props) {
         <Grid item xs={12} sm={6}>
           <Box mt={2} mb={2}>
             <Typography variant='h6' color='primary' align='center'>
-              Add Blog Post
+              Add a Blog 
             </Typography>
             <Typography variant='subtitle2' color='error' align='center'>
               {formValidationError}

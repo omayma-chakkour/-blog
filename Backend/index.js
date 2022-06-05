@@ -15,7 +15,7 @@ app.use("/posts", PostRoutes);
 
 //connecting to mongoDb
 const connectionUrl =
-  "mongodb+srv://greatcoders:greatcoders123@mernstackapp.poyt8.mongodb.net/reactBlogApp?retryWrites=true&w=majority";
+  "mongodb+srv://oumash:OUMA1234@cluster0.c8imt.mongodb.net/?retryWrites=true&w=majority";
 mongoose
   .connect(connectionUrl, {
     useNewUrlParser: true,

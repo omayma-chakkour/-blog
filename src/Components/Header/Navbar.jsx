@@ -14,14 +14,7 @@ export default function Navbar() {
   return (
     <AppBar position='fixed'>
       <Toolbar className={classes.toolbar}>
-        <Link to='/' className={classes.link}>
-          <Box className={classes.logoContainer}>
-            <img src={image} alt='react blog' className={classes.logo} />
-            <Typography variant='h6' className={classes.title}>
-              React Blog
-            </Typography>
-          </Box>
-        </Link>
+  
         <Button
           component={Link}
           to='/posts/add'

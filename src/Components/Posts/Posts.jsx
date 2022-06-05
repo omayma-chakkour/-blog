@@ -20,7 +20,7 @@ export default function Posts() {
 
   return (
     <Container>
-      <Grid container spacing={1}>
+      <Grid container spacing={2}>
         {postData.length ? (
           postData.map((item, i) => (
             <Grid item xs={12} sm={4} key={i}>
@@ -28,7 +28,7 @@ export default function Posts() {
             </Grid>
           ))
         ) : (
-          <Grid item xs={12}>
+          <Grid item xs={1}>
             <Box
               p={5}
               mt={5}

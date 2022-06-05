@@ -1,5 +1,5 @@
 import http from "./HttpRequests";
-const baseUrl = "http://127.0.0.1:50001";
+const baseUrl = "http://127.0.0.1:50002";
 
 //getting all posts
 export const GetAllPosts = () => http.get(`${baseUrl}/posts`);

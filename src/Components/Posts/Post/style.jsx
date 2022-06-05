@@ -8,8 +8,9 @@ export const postStyles = makeStyles((theme) => ({
   cardImageContainer: {
     width: "100%",
     height: "auto",
-    maxHeight: "480px",
+    maxHeight: "300px",
     overflowY: "hidden",
+    
   },
   Link: {
     textDecoration: "none",
